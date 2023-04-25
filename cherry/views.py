@@ -10,7 +10,7 @@ def student(request):
         if SFDO.is_valid():
             return HttpResponse(str(SFDO.cleaned_data))
         else:
-            return HttpResponse('data is inserted')
+            return HttpResponse('data is not valid')
 
 
     return render(request,'student.html',d)
